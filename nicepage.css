@@ -13,6 +13,9 @@ html {
 }
 body {
   margin: 0;
+  font-family: 'Courier', serif;
+  text-align:center;
+  width:100%;
 }
 article,
 aside,
@@ -40619,40 +40622,47 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 
- /*begin-variables custom-site-css*/.quote-box {
-  margin: auto;
-  margin-top: 20%;
-  padding: 10px;
-  background-color: white;
-  text-align: center;
-  width: 400px;
-  border-radius: 3px;
-  box-shadow: 5px 5px 5px #666666;
+ /*begin-variables custom-site-css*/
+
+h1{
+  text-shadow: 1px 1px 1px #aaa;
+  color:black;
+  font-size:3.5em;
+  font-weight:bold;
+  margin-top:150px;
+  letter-spacing:3px;
 }
 
-#quote {
-  font-size: 20px;
-  margin-top: 10px;
+.quote-background{
+    height: 100px;  
+    align-content: middle;
+    text-align: center;
+    background: rgba(0,0,0,0);
+    background-size: cover;
 }
 
-.author {
-  font-size: 18px;
-  text-align: right;
-  position: relative;
+/**@media (max-width : 240px) {
+h1 {
+   font-size:1em;
+  font-weight:200px;
+  }
+}*/
+
+
+@media only screen and (max-width: 640px) {
+  /* Add your custom styles here for Mobile */
+  h1 {font-size:2.5px;font-weight:200px;}
+}
+@media only screen and (max-width: 480px) {
+  /* Add your custom styles here for smaller Mobile */
+  h1 {font-size:2em;font-weight:200px;}
 }
 
-#refresh{
-  width: 110px;
-  position: relative;
-  left: 80px;
+.info{
+   font-size:22px;
+   font-family: serif;
 }
 
-#refresh:hover {
-  position: relative;
-  top: -2px;
-  left: 78px;
-  box-shadow: 2px 2px 2px black;
-}
 /*end-variables custom-site-css*/
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }

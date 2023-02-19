@@ -1,45 +1,36 @@
-var colorWheel = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
+ var prev=0;
 
-var quoteAuthor = "";
-var quoteText = "";
 
-function getQuote() {
+function update(){
+  change();
+ createButton(); 
+}
 
-  $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?", function(data) {
-    quoteText = data.quoteText;
 
-    if (data.quoteAuthor) {
-      quoteAuthor = data.quoteAuthor;
-    } else {
-      quoteAuthor = "Anonymous"
-    }
 
-    $('#quote').animate({
-      opacity: 0
-    }, 500, function() {
-      $('#quote').html(quoteText);
-      $(this).animate({
-        opacity: 1
-      }, 500);
-    });
 
-    $('.author').animate({
-      opacity: 0
-    }, 500, function() {
-      $('.author').html(" - " + quoteAuthor);
-      $(this).animate({
-        opacity: 1
-      }, 500);
-    });
+function change() {
+  var quotes = ["Don't cry because it's over, smile because it happened@Dr. Seuss", "In the end, it's not the years in your life that count. It's the life in your years.@Abraham Lincoln", "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.@Albert Einstein", "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.@Bernard M. Baruch", "A room without books is like a body without a soul.@Marcus Tullius Cicero", "So many books, so little time.” @Frank Zappa", "Be the change that you wish to see in the world.@Mahatma Gandhi", "If you tell the truth, you don't have to remember anything.@Mark Twain"];
+var num=Math.floor(Math.random() * quotes.length);
+  while(num==prev){
+    num=Math.floor(Math.random() * quotes.length);
+  }
+  prev=num;
+  var quotedisplay = quotes[num].split("@");
+  //console.log(quotedisplay[0]);
+  //console.log(quotedisplay[1]);
 
-   
-  }); 
+  document.getElementById('quote').innerHTML =quotedisplay[0];
+  document.getElementById('author').innerHTML = "--" + quotedisplay[1];
+
 }
 
 $(document).ready(function() {
-  var quoteInfo = [];
-  $('#refresh').click(function(event) {
-    event.preventDefault();
-    getQuote();
-  });
+
+  change();
+
+  $("dt").css("fontSize", "19px");
+  $("dl").css("fontSize", "16px");
+
+  
 });
