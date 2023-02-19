@@ -24851,8 +24851,9 @@ h6 {
   color: #ffffff;
 }
 .u-body {
-  color: #111111;
+  color: #ffffff;
   background-color: #ffffff;
+  text-shadow: 1px 1px 1px #aaa;
   --effect-scale: 1.1;
 }
 /*end-variables color*/
