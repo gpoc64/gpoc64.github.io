@@ -6853,7 +6853,9 @@ section.u-image:not(.u-hover-box),
   }
 }
 .u-body .u-sheet .u-sheet {
-  width: 100% !important;
+  width: 50% !important;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #aaa;
 }
 .u-container-layout {
   position: relative;
