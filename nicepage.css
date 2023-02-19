@@ -15,7 +15,8 @@ body {
   margin: 0;
   font-family: 'Courier', serif;
   text-align:center;
-  width:100%;
+  width:50%;
+  color: white;
 }
 article,
 aside,
@@ -40673,5 +40674,5 @@ h1 {
 
 /*end-variables custom-site-css*/
  /*begin-variables base-font-size*/ 
- html { font-size: 16px; }
+ html { font-size: 14px; }
  /*end-variables base-font-size*/
