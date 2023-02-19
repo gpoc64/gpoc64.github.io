@@ -12,10 +12,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+  margin: 20px;
   font-family: 'Courier', serif;
   text-align:center;
-  width:50%;
+  width:100%;
   color: white;
 }
 article,
@@ -6853,7 +6853,7 @@ section.u-image:not(.u-hover-box),
   }
 }
 .u-body .u-sheet .u-sheet {
-  width: 50% !important;
+  width: 100% !important;
   color: #ffffff;
   text-shadow: 1px 1px 1px #aaa;
 }
